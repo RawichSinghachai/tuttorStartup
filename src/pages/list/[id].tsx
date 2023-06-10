@@ -60,7 +60,7 @@ const List = () => {
 
   useEffect(() => {
     if (id) {
-      axios.get(`http://localhost:3000/api/users/${id}`)
+      axios.get(`${process.env.NEXT_PUBLIC_URL}/api/users/${id}`)
         .then((user) => setDatauser(user.data))
     }
 
